@@ -1,6 +1,6 @@
 var Robot = function(opts) {
   opts = opts || {};
-  var MotorShield = require('@amperka/motor').MotorShield;
+  var MotorShield = require('https://github.com/masquotte/espruino-modcat/blob/master/modules/@amperka/motor.js').MotorShield;
   this._leftMotor = opts.leftMotor || MotorShield.M1;
   this._rightMotor = opts.rightMotor || MotorShield.M2;
 
@@ -13,7 +13,7 @@ var Robot = function(opts) {
 };
 
 Robot.prototype._init = function() {
-  var Motor = require('@amperka/motor');
+  var Motor = require('https://github.com/masquotte/espruino-modcat/blob/master/modules/@amperka/motor.js');
   this.leftMotor = Motor.connect(this._leftMotor);
   this.rightMotor = Motor.connect(this._rightMotor);
 
