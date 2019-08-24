@@ -12,7 +12,7 @@ var Receiver = function(pin, opts) {
   this._controller = opts.controller || 'amperka';
   this.keys = null;
   if (this._controller === 'amperka') {
-    this.keys = require('@amperka/ir-remote-controller');
+    this.keys = require('https://github.com/masquotte/espruino-modcat/blob/master/modules/@amperka/ir-remote-controller.js');
   } else {
     this.keys = opts.keys;
   }
